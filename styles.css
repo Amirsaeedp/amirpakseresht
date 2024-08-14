@@ -1,0 +1,512 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container h2 {
+    color: rgb(255, 255, 255);
+}
+
+.container p {
+    color: #F2E74B;
+}
+
+#projectDescription {
+    padding-bottom: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #111;
+    color: #fff;
+    padding: 10px 20px; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    align-items: center; 
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin: 0;
+    padding-top: 5px; 
+}
+
+.navbar .logo img {
+    padding-top: 10px; 
+    height: 50px; 
+}
+
+.navbar .menu-icon {
+
+    position: relative;
+    margin-right: auto;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; 
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center; 
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.navbar .nav-links li::after {
+    content: "|";
+    color: #fff;
+    margin-left: 20px;
+}
+
+.navbar .nav-links li:last-child::after {
+    content: "";
+    margin-left: 0;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #F2E74B;
+    border-bottom: 2px solid #F2E74B;
+}
+
+/* Section Styles */
+.section {
+    padding: 100px 0;
+    text-align: center;
+    /* margin-top: 60px; */
+}
+
+.section h2 {
+    padding-bottom: 60px;
+    
+}
+
+/* Slideshow Styles */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #F2E74B;
+    font-size: 18px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.fade {
+    opacity: 1; 
+}
+
+.home-section {
+    background-color: #111;
+    color: #fff;
+    padding: 0; 
+    margin: 0; 
+    overflow: hidden; 
+}
+
+/* Project section */
+
+
+.project {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid transparent; 
+}
+
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+    border-radius: 0px;
+}
+
+.project h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+
+.project:hover {
+    border: 2px solid #F2E74B; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-section {
+    background-color: #111111;
+}
+
+.projects-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+/* About Us section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 15px;
+    border: 5px solid #F2E74B;
+    transition: border 0.3s;
+}
+
+.about-text {
+    flex: 2;
+    text-align: left; /* Align text to the left */
+}
+
+.about-text h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+    justify-content: baseline ;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+.social-links img {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    width: 20px;
+    height: 20px;
+    
+}
+
+.about-section {
+    background-color: #eee;
+    color: #111;
+}
+
+.contact-section {
+    background-color:  #111;
+    color: #333;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-section button:hover {
+    background-color: #F2E74B;
+}
+
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    /* margin-top: 40px; */
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    /* text-align: center; */
+    border-radius: 20px; 
+    backdrop-filter: blur(10px); 
+    position: relative;
+}
+
+.project-description-container {
+    margin-bottom: 20px; 
+    border-bottom: 2px solid #000000; 
+    padding-bottom: 10px; 
+    text-align: left; 
+}
+
+.modal-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.close {
+    color: #000000;
+    position: absolute; 
+    right: 20px;
+    top: 20px;
+    font-size: 36px;
+    cursor: pointer ;
+}
+
+.modal-content .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.modal-content .mySlides {
+    display: none;
+}
+
+.modal-content .mySlides img {
+    border-radius: 20px; 
+    width: 100%; 
+    height: 100%;
+    max-width: 700px;
+    max-height: 700px;
+    object-fit: cover; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fullscreen Menu Styles */
+.fullscreen-menu {
+    display: none; 
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    color: #fff;
+    z-index: 1001;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+    text-align: left;
+    flex-direction: column;
+}
+
+.fullscreen-menu .close {
+    font-size: 36px;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.fullscreen-menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding-left: 0;
+}
+
+.fullscreen-menu-links li {
+    margin: 20px 0;
+}
+
+.fullscreen-menu-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.fullscreen-menu-links a:hover {
+    color: #F2E74B;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar .menu-icon {
+        display: block; 
+    }
+
+    .navbar .nav-links {
+        display: none; 
+    }
+
+    .modal-content {
+        width: 80%;
+      }
+      
+    .prev, .next {
+        font-size: 14px;
+        padding: 12px;
+      }
+}
